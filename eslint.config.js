@@ -4,7 +4,27 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
+  // 🛠️ Tell ESLint this config file is ESM
+  {
+    files: ['eslint.config.js'],
+    languageOptions: {
+      sourceType: 'module',
+      ecmaVersion: 'latest',
+      globals: globals.node,
+    },
+  },
+
   { ignores: ['dist'] },
+
+  {
+    files: ['**/*config.js'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      sourceType: 'script',
+      globals: globals.node,
+    },
+  },
+
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
