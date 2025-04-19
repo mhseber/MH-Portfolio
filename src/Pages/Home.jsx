@@ -1,5 +1,11 @@
+import MHIntro from "./MHIntro";
+
 const Home = () => {
-  return <div>My Home</div>;
+  return (
+    <div>
+      <MHIntro></MHIntro>
+    </div>
+  );
 };
 
 export default Home;

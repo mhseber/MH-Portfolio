@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/mh-Logo.png";
+import { IoIosHome } from "react-icons/io";
 const Navbar = () => {
   const navOptions = (
     <>
       <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
-        <Link to="/">Home</Link>
+        <Link to="/">
+          <IoIosHome />
+          Home
+        </Link>
       </li>
       <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
         <Link to="">Skills</Link>
