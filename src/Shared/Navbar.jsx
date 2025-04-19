@@ -1,26 +1,43 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/mh-Logo.png";
-import { IoIosHome } from "react-icons/io";
+import { SlFire } from "react-icons/sl";
+import { GoProjectSymlink } from "react-icons/go";
+import { LuContact } from "react-icons/lu";
+import { IoHomeOutline, IoPersonOutline } from "react-icons/io5";
 const Navbar = () => {
   const navOptions = (
     <>
       <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
         <Link to="/">
-          <IoIosHome />
+          <IoHomeOutline />
           Home
         </Link>
       </li>
       <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
-        <Link to="">Skills</Link>
+        <Link to="">
+          <SlFire />
+          Skills
+        </Link>
       </li>
       <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
-        <Link to="">Projects </Link>
+        <Link to="">
+          {" "}
+          <GoProjectSymlink />
+          Projects{" "}
+        </Link>
       </li>
       <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
-        <Link to="">Contact</Link>
+        <Link to="">
+          <LuContact />
+          Contact
+        </Link>
       </li>
       <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
-        <Link to="">About</Link>
+        <Link to="">
+          {" "}
+          <IoPersonOutline />
+          About
+        </Link>
       </li>
     </>
   );
