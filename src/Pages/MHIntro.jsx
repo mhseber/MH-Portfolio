@@ -1,11 +1,10 @@
 import { FaDownload } from "react-icons/fa";
 import me from "../assets/seber.png";
-import { motion } from "framer-motion";
 import NameAnimation from "./NameAnimation";
 
 const MHIntro = () => {
   return (
-    <div className="flex justify-around">
+    <div id="home" className="flex justify-around pt-40">
       {/* text */}
       <div className="pt-20">
         <h1 className="text-5xl font-extrabold">

@@ -4,20 +4,37 @@ import { SlFire } from "react-icons/sl";
 import { GoProjectSymlink } from "react-icons/go";
 import { LuContact } from "react-icons/lu";
 import { IoHomeOutline, IoPersonOutline } from "react-icons/io5";
+import { Link as ScrollLink } from "react-scroll";
 const Navbar = () => {
   const navOptions = (
     <>
       <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
-        <Link to="/">
+        <ScrollLink
+          to="home"
+          smooth={true}
+          duration={500}
+          offset={-80}
+          spy={true}
+          activeClass="active"
+          className="flex items-center gap-2 cursor-pointer"
+        >
           <IoHomeOutline />
           Home
-        </Link>
+        </ScrollLink>
       </li>
       <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
-        <Link to="">
+        <ScrollLink
+          to="skills"
+          smooth={true}
+          duration={500}
+          offset={-80}
+          spy={true}
+          activeClass="active"
+          className="flex items-center gap-2 cursor-pointer"
+        >
           <SlFire />
           Skills
-        </Link>
+        </ScrollLink>
       </li>
       <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
         <Link to="">
@@ -44,7 +61,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="shadow-sm navbar bg-base-100">
+      <div className="fixed z-10 text-black shadow-lg bg-opacity-30 backdrop-blur-md navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
