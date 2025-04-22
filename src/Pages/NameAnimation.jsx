@@ -4,7 +4,7 @@ const name = "Mahamudul Hasan Seber";
 
 const NameAnimation = () => {
   return (
-    <div className="flex flex-wrap text-5xl font-extrabold text-purple-950">
+    <div className="flex flex-wrap font-extrabold lg:text-5xl text-purple-950">
       {name.split("").map((char, index) => (
         <motion.span
           key={index}

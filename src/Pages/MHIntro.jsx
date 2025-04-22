@@ -4,14 +4,14 @@ import NameAnimation from "./NameAnimation";
 
 const MHIntro = () => {
   return (
-    <div id="home" className="flex justify-around pt-40">
+    <div id="home" className="justify-around pt-40 lg:flex">
       {/* text */}
-      <div className="pt-20">
-        <h1 className="text-5xl font-extrabold">
+      <div className="pt-20 pb-4 pl-5 lg:pl-0 lg:pb-0">
+        <h1 className="text-4xl font-extrabold lg:text-5xl">
           <span className="text-gray-500">Hi I'am</span> <br />
           <NameAnimation />
         </h1>
-        <h1 className="pt-6 text-3xl font-bold">
+        <h1 className="pt-6 text-xl font-bold lg:text-3xl">
           <span className="text-purple-500">Frontend Developer</span> || Web
           Enthusiast
         </h1>
@@ -37,7 +37,7 @@ const MHIntro = () => {
       </div>
 
       {/* img */}
-      <div>
+      <div className="pl-20 lg:pl-0">
         <img
           src={me}
           class="animate-gradient-x rounded-full border-4 border-dashed border-purple-950 shadow-[0_0_25px_5px_rgba(128,0,128,0.5)] bg-gradient-to-br from-purple-800 via-black to-purple-500"
