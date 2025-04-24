@@ -1,6 +1,13 @@
-import { FaDownload } from "react-icons/fa";
+import {
+  FaDownload,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import me from "../assets/seber.png";
 import NameAnimation from "./NameAnimation";
+import { FiGithub } from "react-icons/fi";
 
 const MHIntro = () => {
   return (
@@ -33,6 +40,42 @@ const MHIntro = () => {
           <button className="border-l-4 border-r-4 border-black btn btn-soft btn-primary">
             Contact Me
           </button>
+        </div>
+        {/* social icons */}
+        <div className="flex justify-center gap-4 p-4 shadow-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-700 rounded-2xl mt-7  bg-[length:200%_200%] animate-gradient-x">
+          <a
+            href="https://www.facebook.com/mh.seber.9/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 transition-transform duration-300 bg-white rounded-full hover:scale-110"
+          >
+            <FaFacebook className="text-2xl text-blue-600" />
+          </a>
+          <a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 transition-transform duration-300 bg-white rounded-full hover:scale-110"
+          >
+            <FaLinkedinIn className="text-2xl text-blue-700" />
+          </a>
+
+          <a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 transition-transform duration-300 bg-white rounded-full hover:scale-110"
+          >
+            <FaInstagram className="text-2xl text-pink-600" />
+          </a>
+          <a
+            href="https://github.com/mhseber"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 transition-transform duration-300 bg-white rounded-full hover:scale-110"
+          >
+            <FiGithub className="text-2xl text-gray-800" />
+          </a>
         </div>
       </div>
 

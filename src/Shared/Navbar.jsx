@@ -37,11 +37,18 @@ const Navbar = () => {
         </ScrollLink>
       </li>
       <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
-        <Link to="">
-          {" "}
+        <ScrollLink
+          to="projects"
+          smooth={true}
+          duration={500}
+          offset={-80}
+          spy={true}
+          activeClass="active"
+          className="flex items-center gap-2 cursor-pointer"
+        >
           <GoProjectSymlink />
           Projects{" "}
-        </Link>
+        </ScrollLink>
       </li>
       <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
         <Link to="">

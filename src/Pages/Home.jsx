@@ -1,4 +1,5 @@
 import MHIntro from "./MHIntro";
+import Projects from "./Projects";
 import Skills from "./Skills";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <MHIntro></MHIntro>
       <Skills></Skills>
+      <Projects></Projects>
     </div>
   );
 };
