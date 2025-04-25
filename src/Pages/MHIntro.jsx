@@ -52,7 +52,7 @@ const MHIntro = () => {
             <FaFacebook className="text-2xl text-blue-600" />
           </a>
           <a
-            href=""
+            href="https://www.linkedin.com/in/mahamudul-hasan-seber-9280072a9/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 transition-transform duration-300 bg-white rounded-full hover:scale-110"
@@ -61,7 +61,7 @@ const MHIntro = () => {
           </a>
 
           <a
-            href=""
+            href="https://www.instagram.com/mh_seber?igsh=MTh3M2o0NjZ6dXBjYw=="
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 transition-transform duration-300 bg-white rounded-full hover:scale-110"
