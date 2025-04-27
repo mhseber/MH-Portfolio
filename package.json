@@ -12,6 +12,7 @@
   "dependencies": {
     "framer-motion": "^12.7.4",
     "localforage": "^1.10.0",
+    "lucide-react": "^0.503.0",
     "match-sorter": "^8.0.0",
     "motion": "^12.7.4",
     "react": "^19.0.0",

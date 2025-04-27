@@ -47,7 +47,7 @@ const Navbar = () => {
           className="flex items-center gap-2 cursor-pointer"
         >
           <GoProjectSymlink />
-          Projects{" "}
+          Projects
         </ScrollLink>
       </li>
       <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
