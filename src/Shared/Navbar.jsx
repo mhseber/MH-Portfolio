@@ -51,17 +51,32 @@ const Navbar = () => {
         </ScrollLink>
       </li>
       <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
-        <Link to="">
-          <LuContact />
-          Contact
-        </Link>
-      </li>
-      <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
-        <Link to="">
-          {" "}
+        <ScrollLink
+          to="about"
+          smooth={true}
+          duration={500}
+          offset={-80}
+          spy={true}
+          activeClass="active"
+          className="flex items-center gap-2 cursor-pointer"
+        >
           <IoPersonOutline />
           About
-        </Link>
+        </ScrollLink>
+      </li>
+      <li className="transition duration-200 hover:underline hover:decoration-purple-500 hover:underline-offset-4">
+        <ScrollLink
+          to="contact"
+          smooth={true}
+          duration={500}
+          offset={-80}
+          spy={true}
+          activeClass="active"
+          className="flex items-center gap-2 cursor-pointer"
+        >
+          <LuContact />
+          Contact
+        </ScrollLink>
       </li>
     </>
   );
