@@ -2,7 +2,7 @@ import { IoPersonOutline } from "react-icons/io5";
 import about from "../assets/about.png";
 const About = () => {
   return (
-    <div>
+    <div id="about">
       <section className="pt-10 pl-10">
         <h2 className="flex gap-2 text-4xl font-bold text-gray-900">
           <IoPersonOutline className="text-red-500" />
