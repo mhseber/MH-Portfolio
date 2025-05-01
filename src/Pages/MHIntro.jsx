@@ -8,6 +8,7 @@ import {
 import me from "../assets/seber.png";
 import NameAnimation from "./NameAnimation";
 import { FiGithub } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const MHIntro = () => {
   return (
@@ -37,9 +38,12 @@ const MHIntro = () => {
             </span>
             <span className="absolute top-0 left-0 z-0 w-full h-full transition-all duration-700 ease-in-out opacity-0 bg-gradient-to-r from-purple-700 via-pink-500 to-black group-hover:opacity-100"></span>
           </button>
-          <button className="border-l-4 border-r-4 border-black btn btn-soft btn-primary">
-            Contact Me
-          </button>
+
+          <a href="#contact">
+            <button className="border-l-4 border-r-4 border-black btn btn-soft btn-primary">
+              Contact Me
+            </button>
+          </a>
         </div>
         {/* social icons */}
         <div className="flex justify-center gap-4 p-4 shadow-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-700 rounded-2xl mt-7  bg-[length:200%_200%] animate-gradient-x">

@@ -5,17 +5,20 @@ const Footer = () => {
         {/* About */}
         <div>
           <h4 className="mb-2 text-xl font-semibold">About Me</h4>
-          <p className="text-sm">
+          <p className="text-sm text-gray-400">
             I’m Mahamudul Hasan Seber — a passionate developer & marketer. I
             love building beautiful web experiences and solving business
             problems with tech.
+          </p>
+          <p className="pt-5 text-2xl font-extrabold">
+            "Never miss your Prayers."
           </p>
         </div>
 
         {/* Links */}
         <div>
           <h4 className="mb-2 text-xl font-semibold">Quick Links</h4>
-          <ul className="space-y-1 text-sm">
+          <ul className="space-y-1 text-sm text-gray-400">
             <li>
               <a href="#home" className="hover:underline">
                 Home
@@ -47,7 +50,7 @@ const Footer = () => {
         {/* Contact Info */}
         <div>
           <h4 className="mb-2 text-xl font-semibold">Contact</h4>
-          <ul className="space-y-1 text-sm">
+          <ul className="space-y-1 text-sm text-gray-400">
             <li>Email: sebermh@gmail.com</li>
             <li>Phone: 01799894176</li>
             <li>Location: Gandaria, Dhaka</li>

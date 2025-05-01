@@ -4,7 +4,7 @@ import { IoIosMail } from "react-icons/io";
 import { LuContact, LuPhoneCall } from "react-icons/lu";
 import { Send } from "lucide-react";
 import { motion } from "framer-motion";
-import emailjs from "emailjs-com"; // ✅ Import EmailJS
+import emailjs from "emailjs-com"; //
 
 const Contact = () => {
   const [status, setStatus] = useState("idle");
@@ -76,7 +76,7 @@ const Contact = () => {
             <div className="w-20 h-16 p-2 text-2xl bg-white rounded-full btn">
               <FaLocationDot />
             </div>
-            <p className="text-gray-400">Our Location</p>
+            <p className="text-gray-400">My Location</p>
             <p>44 No S K Dash Road, GANDARIA, Dhaka</p>
           </div>
         </div>

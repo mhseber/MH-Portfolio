@@ -110,9 +110,12 @@ const Navbar = () => {
               {navOptions}
             </ul>
           </div>
-          <a className="text-xl">
+          {/* <a className="text-xl">
             <img className="pl-5 w-36" src={logo} alt="logo" />
-          </a>
+          </a> */}
+          <h1 className="pl-4 text-2xl font-extrabold">
+            <i>محمود الحسن صابر</i>
+          </h1>
         </div>
         <div className="hidden pr-32 font-medium navbar-center lg:flex">
           <ul className="px-1 text-2xl menu menu-horizontal ">{navOptions}</ul>
