@@ -2,7 +2,6 @@ import {
   FaDownload,
   FaFacebook,
   FaInstagram,
-  FaLinkedin,
   FaLinkedinIn,
 } from "react-icons/fa";
 import me from "../assets/seber.png";
@@ -30,10 +29,19 @@ const MHIntro = () => {
         </p>
         {/* btn */}
         <div className="pt-6 pl-4 space-x-2">
-          <button className="relative px-6 py-2 overflow-hidden text-sm text-black border border-purple-500 rounded-md sm:text-base md:text-lg lg:text-xl group">
+          <button
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/mhseber-resume.pdf";
+              link.download = "MH_Seber_Resume.pdf";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
+            className="relative px-6 py-2 overflow-hidden text-sm text-black border border-purple-500 rounded-md sm:text-base md:text-lg lg:text-xl group"
+          >
             <span className="relative z-10 flex">
-              {" "}
-              <FaDownload className="pt-2" />
+              <FaDownload className="pt-2 mr-2" />
               DOWNLOAD RESUME
             </span>
             <span className="absolute top-0 left-0 z-0 w-full h-full transition-all duration-700 ease-in-out opacity-0 bg-gradient-to-r from-purple-700 via-pink-500 to-black group-hover:opacity-100"></span>

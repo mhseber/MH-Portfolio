@@ -106,7 +106,7 @@ const projects = [
       "A one-stop destination for the latest gadgets including smartphones, headphones, keyboards, and more.",
     description:
       "Gadget Heaven is an e-commerce styled platform dedicated to showcasing and selling the newest tech gadgets. From cutting-edge smartphones to high-quality audio devices and advanced keyboards, this site provides detailed product views, smooth UI animations, and a user-friendly browsing experience. It’s designed to appeal to tech enthusiasts looking for modern devices at their fingertips.",
-    technologies: ["React", "Tailwind", "Framer Motion"],
+    technologies: ["React", "Tailwind CSS", "NodeJs", "React Router"],
     challenges:
       "Managing a diverse range of product categories with optimized performance was challenging. Ensuring fast image loading, smooth scrolling animations, and maintaining a clean UI across devices required careful planning.",
     improvements:

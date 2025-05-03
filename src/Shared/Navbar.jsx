@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import logo from "../assets/mh-Logo.png";
 import { SlFire } from "react-icons/sl";
 import { GoProjectSymlink } from "react-icons/go";
 import { LuContact } from "react-icons/lu";
@@ -110,9 +108,6 @@ const Navbar = () => {
               {navOptions}
             </ul>
           </div>
-          {/* <a className="text-xl">
-            <img className="pl-5 w-36" src={logo} alt="logo" />
-          </a> */}
           <h1 className="pl-4 text-2xl font-extrabold">
             <i>محمود الحسن صابر</i>
           </h1>
