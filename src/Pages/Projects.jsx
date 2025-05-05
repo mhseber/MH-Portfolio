@@ -122,7 +122,7 @@ const projects = [
       "Discover eco-friendly travel destinations and book sustainable trips effortlessly.",
     description:
       "ECO Tr@vel is a travel booking platform focused on promoting sustainable tourism. Users can explore eco-friendly destinations, plan trips, and book accommodations that prioritize environmental responsibility. With a smooth and intuitive UI, travelers can find curated eco-tours, budget plans, and adventure activities, all with a few clicks.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    technologies: ["Next.js", "React", "Tailwind CSS", "Firebase"],
     challenges:
       "Implementing real-time booking availability and integrating maps for destination highlights was challenging. Also ensuring that the platform remains lightweight and SEO-optimized required careful optimization strategies.",
     improvements:
