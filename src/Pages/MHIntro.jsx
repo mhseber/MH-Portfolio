@@ -40,15 +40,15 @@ const MHIntro = () => {
             }}
             className="relative px-6 py-2 overflow-hidden text-sm text-black border border-purple-500 rounded-md sm:text-base md:text-lg lg:text-xl group"
           >
-            <span className="relative z-10 flex">
+            <span className="relative z-10 flex hover:text-white">
               <FaDownload className="pt-2 mr-2" />
               DOWNLOAD RESUME
             </span>
-            <span className="absolute top-0 left-0 z-0 w-full h-full transition-all duration-700 ease-in-out opacity-0 bg-gradient-to-r from-purple-700 via-pink-500 to-black group-hover:opacity-100"></span>
+            <span className="absolute top-0 left-0 z-0 w-full h-full transition-all duration-700 ease-in-out opacity-0 bg-gradient-to-r from-blue-700 to-black group-hover:opacity-100"></span>
           </button>
 
           <a href="#contact">
-            <button className="border-l-4 border-r-4 border-black btn btn-soft btn-primary">
+            <button className="bg-gradient-to-r from-blue-700  to-black text-white px-6 py-2 rounded-lg hover:bg-[#6600CC] transition">
               Contact Me
             </button>
           </a>

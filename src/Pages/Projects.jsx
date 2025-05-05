@@ -1,93 +1,3 @@
-// import { GoProjectSymlink } from "react-icons/go";
-// import project1 from "../assets/projects 1.PNG";
-// import project2 from "../assets/projects 2.PNG";
-// import project3 from "../assets/projects 3.PNG";
-// import project4 from "../assets/projects 4.PNG";
-
-// const projects = [
-//   {
-//     id: 1,
-//     title: "Gadget Heaven",
-//     image: project1,
-//     brief: "",
-//     description: "",
-//     technologies: ["React", "tailwindCSS", "Firebase"],
-//     liveLink: "https://useful-mhsebermeeting.surge.sh/",
-//     githubLink: "https://github.com/mhseber/Gadget-Heaven",
-//     challenges: "",
-//     improvements: "",
-//   },
-//   {
-//     id: 2,
-//     title: "ECO Tr@vel",
-//     image: project2,
-//     brief: "",
-//     description: "",
-//     technologies: ["React", "tailwindCSS", "NodeJs", "Firebase"],
-//     liveLink: "https://eco-travel-72b99.web.app/",
-//     githubLink: "https://github.com/mhseber/Assignment-9",
-//     challenges: "",
-//     improvements: "",
-//   },
-//   {
-//     id: 3,
-//     title: "ProHand",
-//     image: project3,
-//     brief: "",
-//     description: "",
-//     technologies: ["React", "tailwindCSS", "NodeJs", "Firebase"],
-//     liveLink: "https://prohand-f1b91.web.app/",
-//     githubLink: "https://github.com/mhseber/ProHand-client",
-//     challenges: "",
-//     improvements: "",
-//   },
-//   {
-//     id: 4,
-//     title: "Peddy",
-//     image: project4,
-//     brief: "",
-//     description: "",
-//     technologies: ["HTML", "CSS"],
-//     liveLink: "https://voiceless-teeth.surge.sh/",
-//     githubLink: "https://github.com/mhseber/Assignment-5",
-//     challenges: "",
-//     improvements: "",
-//   },
-// ];
-// const Projects = () => {
-//   return (
-//     <div id="projects">
-//       <h1
-//         id="projects"
-//         className="flex gap-2 pl-5 mb-12 text-4xl font-semibold underline"
-//       >
-//         <GoProjectSymlink className="text-red-500" />
-//         Projects
-//       </h1>
-//       {/* Projects Section */}
-//       <section>
-//         <div className="shadow-sm card bg-base-100 w-96">
-//           <figure>
-//             <img src={project1} alt="project" />
-//           </figure>
-//           <div className="card-body">
-//             <h2 className="card-title">Card Title</h2>
-//             <p>
-//               A card component has a figure, a body part, and inside body there
-//               are title and actions parts
-//             </p>
-//             <div className="justify-end card-actions">
-//               <button className="btn btn-primary">Buy Now</button>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// };
-
-// export default Projects;
-
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, useScroll } from "framer-motion";
 import { GoProjectSymlink } from "react-icons/go";
@@ -154,7 +64,7 @@ const projects = [
       "Buy your favorite pets and explore detailed information about pet care and maintenance.",
     description:
       "Peddy is an online platform where pet lovers can easily find and purchase a wide variety of pets, including cats, dogs, birds, and more. We also offer rich educational content about pet health, grooming, training, and daily care to help you become the best pet owner possible. Our goal is to build a trusted pet community where love for animals thrives.",
-    technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
+    technologies: ["NodeJs", "DaisyUi", "Firebase", "Tailwind CSS"],
     challenges:
       "Managing real-time inventory updates for pets, ensuring secure online transactions, and providing accurate, up-to-date pet care information were some key challenges.",
     improvements:
@@ -215,7 +125,7 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="object-cover w-full h-56"
+                className="object-cover w-full h-56 p-3 rounded-lg"
               />
               <div className="p-5 space-y-3">
                 <h3 className="text-2xl font-bold text-gray-900">
@@ -288,7 +198,7 @@ const Projects = () => {
                       {selectedProject.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="px-3 py-1 text-sm text-gray-500 bg-gray-200 rounded-full"
+                          className="px-3 py-1 mt-3 text-sm text-gray-500 bg-gray-200 rounded-full"
                         >
                           {tech}
                         </span>
@@ -313,12 +223,12 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div className="flex gap-4 mt-6">
+                <div className="flex gap-4 mt-6 ">
                   <a
                     href={selectedProject.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 text-white transition bg-blue-500 rounded hover:bg-blue-600"
+                    className="flex items-center gap-2 px-4 py-2 text-white transition rounded bg-gradient-to-r from-blue-700 to-black"
                   >
                     <ExternalLink size={18} /> Live Demo
                   </a>
