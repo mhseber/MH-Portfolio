@@ -92,7 +92,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-r from-indigo-700 via-purple-500 to-black "
+      className="py-20 bg-gradient-to-r from-indigo-400 to-black "
     >
       <div ref={container} className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Section Header */}
