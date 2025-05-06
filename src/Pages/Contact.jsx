@@ -4,7 +4,9 @@ import { IoIosMail } from "react-icons/io";
 import { LuContact, LuPhoneCall } from "react-icons/lu";
 import { Send } from "lucide-react";
 import { motion } from "framer-motion";
-import emailjs from "emailjs-com"; //
+import emailjs from "emailjs-com";
+import animation from "../assets/Animation.json";
+import Lottie from "lottie-react";
 
 const Contact = () => {
   const [status, setStatus] = useState("idle");
@@ -51,7 +53,7 @@ const Contact = () => {
             <div className="w-20 h-16 p-2 text-2xl bg-white rounded-full btn">
               <LuPhoneCall />
             </div>
-            <p className="text-gray-400">Contact Us</p>
+            <p className="text-gray-400">Contact Me</p>
             <p>
               <i>Mahamudul Hasan Seber</i>
             </p>
@@ -65,8 +67,10 @@ const Contact = () => {
             <div className="w-20 h-16 p-2 text-2xl bg-white rounded-full btn">
               <IoIosMail />
             </div>
-            <p className="text-gray-400">Mail Us</p>
-            <p>sebermh@gmail.com</p>
+            <p className="text-gray-400">Mail Me</p>
+            <p>
+              <i>sebermh@gmail.com</i>
+            </p>
           </div>
         </div>
 
@@ -77,84 +81,95 @@ const Contact = () => {
               <FaLocationDot />
             </div>
             <p className="text-gray-400">My Location</p>
-            <p>44 No S K Dash Road, GANDARIA, Dhaka</p>
+            <p>
+              <i>44 No S K Dash Road, GANDARIA, Dhaka</i>
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Form */}
-      <section className="px-10 mt-16">
-        <h1 className="mb-6 text-2xl font-bold text-black">Get in Touch</h1>
+      <section className="flex flex-col-reverse items-center justify-between gap-10 px-6 py-12 mt-2 bg-sky-200 md:flex-row md:items-start md:gap-20 lg:px-20">
+        {/* Form */}
+        <section className="w-full max-w-xl">
+          <h1 className="mb-6 text-3xl font-bold text-black">Get in Touch</h1>
 
-        <form onSubmit={handleSubmit} className="max-w-2xl space-y-6">
-          <div>
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-gray-700"
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700 "
+              >
+                Name*
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className="block w-full p-3 mt-1 text-gray-900 bg-white rounded-md shadow-sm input input-primary "
+                required
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Email*
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="form_email"
+                className="block w-full p-3 mt-1 text-gray-900 bg-white rounded-md shadow-sm input input-primary"
+                required
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Message*
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={4}
+                className="block w-full p-3 mt-1 text-gray-900 bg-white rounded-md shadow-sm textarea textarea-primary"
+                required
+              />
+            </div>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              type="submit"
+              className="inline-flex items-center px-6 py-3 font-medium text-white transition-colors rounded-md bg-gradient-to-r from-blue-700 to-black"
+              disabled={status === "sending"}
             >
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              className="block w-full p-2 mt-1 text-gray-900 bg-white border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
-              required
-            />
+              <Send className="w-5 h-5 mr-2" />
+              {status === "sending" ? "Sending..." : "Send Message"}
+            </motion.button>
+
+            {status === "success" && (
+              <p className="text-green-600">Message sent successfully!</p>
+            )}
+            {status === "error" && (
+              <p className="text-red-600">
+                Failed to send message. Please try again.
+              </p>
+            )}
+          </form>
+        </section>
+
+        {/* Animation */}
+        <section className="flex justify-center w-full max-w-md pt-10 ">
+          <div className="w-full max-w-xs">
+            <Lottie animationData={animation} loop={true} />
           </div>
-
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="form_email"
-              className="block w-full p-2 mt-1 text-gray-900 bg-white border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
-              required
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="message"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              className="block w-full p-2 mt-1 text-gray-900 bg-white border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-blue-500"
-              required
-            />
-          </div>
-
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            type="submit"
-            className="inline-flex items-center px-6 py-3 text-white transition-colors bg-gradient-to-r from-blue-700 to-black"
-            disabled={status === "sending"}
-          >
-            <Send className="w-5 h-5 mr-2 " />
-            {status === "sending" ? "Sending..." : "Send Message"}
-          </motion.button>
-
-          {status === "success" && (
-            <p className="text-green-600">Message sent successfully!</p>
-          )}
-          {status === "error" && (
-            <p className="text-red-600">
-              Failed to send message. Please try again.
-            </p>
-          )}
-        </form>
+        </section>
       </section>
     </div>
   );

@@ -59,10 +59,10 @@ const skills = [
   {
     category: "DevOps & Hosting",
     items: [
-      { name: "Netlify", level: 30 },
+      { name: "Netlify", level: 70 },
       { name: "Vercel", level: 85 },
       { name: "Surge", level: 70 },
-      { name: "GitHub Actions", level: 40 },
+      { name: "GitHub Actions", level: 80 },
       { name: "Firebase", level: 90 },
     ],
   },
@@ -99,7 +99,7 @@ const Skills = () => {
         {tools.map((tool, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center mr-6 space-y-2"
+            className="flex flex-col items-center justify-center pt-3 mr-6 space-y-2"
           >
             <motion.div
               whileHover={{ scale: 1.1 }}
@@ -125,7 +125,7 @@ const Skills = () => {
         {tools.map((tool, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center mr-6 space-y-2"
+            className="flex flex-col items-center justify-center pt-2 mr-6 space-y-2"
           >
             <motion.div
               whileHover={{ scale: 1.1 }}
