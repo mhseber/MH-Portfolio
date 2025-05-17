@@ -6,42 +6,35 @@ import project1 from "../assets/projects 1.PNG";
 import project2 from "../assets/projects 2.PNG";
 import project3 from "../assets/projects 3.PNG";
 import project4 from "../assets/projects 4.PNG";
+import project5 from "../assets/projects 5.PNG";
 
 const projects = [
   {
     id: 1,
-    title: "Gadget Heaven",
-    image: project1,
+    title: "Movies World",
+    image: project5,
     brief:
-      "A one-stop destination for the latest gadgets including smartphones, headphones, keyboards, and more.",
+      "A dynamic movie exploration website showcasing posters and details across multiple categories.",
     description:
-      "Gadget Heaven is an e-commerce styled platform dedicated to showcasing and selling the newest tech gadgets. From cutting-edge smartphones to high-quality audio devices and advanced keyboards, this site provides detailed product views, smooth UI animations, and a user-friendly browsing experience. It’s designed to appeal to tech enthusiasts looking for modern devices at their fingertips.",
-    technologies: ["React", "Tailwind CSS", "NodeJs", "React Router"],
+      "Movies World is a visually engaging web application where users can explore movies by category, view posters, and dive into detailed information including synopsis, release year, cast, ratings, and more. The site offers a smooth and interactive user experience, making it easy to find and discover new or popular films.",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "TMDB API",
+      "React Router",
+      "Firebase Auth",
+      "MongoDB",
+    ],
     challenges:
-      "Managing a diverse range of product categories with optimized performance was challenging. Ensuring fast image loading, smooth scrolling animations, and maintaining a clean UI across devices required careful planning.",
+      "Implementing a responsive and fast-loading gallery with category-based filtering was challenging. Fetching and displaying large sets of data from external APIs while maintaining performance and user experience also required optimization.",
     improvements:
-      "Future plans include integrating a real-time search functionality, user reviews, and setting up a shopping cart with a secure checkout system to enhance the user experience even further.",
-    liveLink: "https://useful-mhsebermeeting.surge.sh/",
-    githubLink: "https://github.com/mhseber/Gadget-Heaven",
+      "Future improvements include adding user authentication, watchlist functionality, trailer previews, and a review system. Enhancing search filters and supporting dark mode are also planned.",
+    liveLink: "https://auth-more-add-page.web.app",
+    githubLink: "https://github.com/mhseber/Movies-World-client",
   },
   {
     id: 2,
-    title: "ECO Tr@vel",
-    image: project2,
-    brief:
-      "Discover eco-friendly travel destinations and book sustainable trips effortlessly.",
-    description:
-      "ECO Tr@vel is a travel booking platform focused on promoting sustainable tourism. Users can explore eco-friendly destinations, plan trips, and book accommodations that prioritize environmental responsibility. With a smooth and intuitive UI, travelers can find curated eco-tours, budget plans, and adventure activities, all with a few clicks.",
-    technologies: ["Next.js", "React", "Tailwind CSS", "Firebase"],
-    challenges:
-      "Implementing real-time booking availability and integrating maps for destination highlights was challenging. Also ensuring that the platform remains lightweight and SEO-optimized required careful optimization strategies.",
-    improvements:
-      "Future improvements include adding user reviews, integrating payment gateways for instant booking, and expanding the platform to include carbon footprint calculators to help users travel more responsibly.",
-    liveLink: "https://eco-travel-72b99.web.app/",
-    githubLink: "https://github.com/mhseber/ECO-Travel",
-  },
-  {
-    id: 3,
     title: "ProHand",
     image: project3,
     brief:
@@ -57,7 +50,40 @@ const projects = [
     githubLink: "https://github.com/mhseber/ProHand-client",
   },
   {
+    id: 3,
+    title: "Gadget Heaven",
+    image: project1,
+    brief:
+      "A one-stop destination for the latest gadgets including smartphones, headphones, keyboards, and more.",
+    description:
+      "Gadget Heaven is an e-commerce styled platform dedicated to showcasing and selling the newest tech gadgets. From cutting-edge smartphones to high-quality audio devices and advanced keyboards, this site provides detailed product views, smooth UI animations, and a user-friendly browsing experience. It’s designed to appeal to tech enthusiasts looking for modern devices at their fingertips.",
+    technologies: ["React", "Tailwind CSS", "NodeJs", "React Router"],
+    challenges:
+      "Managing a diverse range of product categories with optimized performance was challenging. Ensuring fast image loading, smooth scrolling animations, and maintaining a clean UI across devices required careful planning.",
+    improvements:
+      "Future plans include integrating a real-time search functionality, user reviews, and setting up a shopping cart with a secure checkout system to enhance the user experience even further.",
+    liveLink: "https://useful-mhsebermeeting.surge.sh/",
+    githubLink: "https://github.com/mhseber/Gadget-Heaven",
+  },
+  {
     id: 4,
+    title: "ECO Tr@vel",
+    image: project2,
+    brief:
+      "Discover eco-friendly travel destinations and book sustainable trips effortlessly.",
+    description:
+      "ECO Tr@vel is a travel booking platform focused on promoting sustainable tourism. Users can explore eco-friendly destinations, plan trips, and book accommodations that prioritize environmental responsibility. With a smooth and intuitive UI, travelers can find curated eco-tours, budget plans, and adventure activities, all with a few clicks.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Firebase"],
+    challenges:
+      "Implementing real-time booking availability and integrating maps for destination highlights was challenging. Also ensuring that the platform remains lightweight and SEO-optimized required careful optimization strategies.",
+    improvements:
+      "Future improvements include adding user reviews, integrating payment gateways for instant booking, and expanding the platform to include carbon footprint calculators to help users travel more responsibly.",
+    liveLink: "https://eco-travel-72b99.web.app/",
+    githubLink: "https://github.com/mhseber/ECO-Travel",
+  },
+
+  {
+    id: 5,
     title: "Peddy",
     image: project4,
     brief:
