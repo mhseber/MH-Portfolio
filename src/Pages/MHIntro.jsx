@@ -7,7 +7,6 @@ import {
 import me from "../assets/seber.png";
 import NameAnimation from "./NameAnimation";
 import { FiGithub } from "react-icons/fi";
-import { Link } from "react-router-dom";
 
 const MHIntro = () => {
   return (
