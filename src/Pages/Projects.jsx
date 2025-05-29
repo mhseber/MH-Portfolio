@@ -35,12 +35,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "ProHand",
+    title: "TechAid",
     image: project3,
     brief:
       "Fast and reliable repair services for all your electronics, from TVs to computers, ACs, and more.",
     description:
-      "ProHand Electronics Repair is your one-stop solution for professional and affordable repair services. We specialize in fixing TVs, computers, PCs, air conditioners, and a wide range of electronic appliances. Our expert technicians ensure quality service and customer satisfaction with every repair job.",
+      "TechAid Electronics Repair is your one-stop solution for professional and affordable repair services. We specialize in fixing TVs, computers, PCs, air conditioners, and a wide range of electronic appliances. Our expert technicians ensure quality service and customer satisfaction with every repair job.",
     technologies: ["Node.js", "Express", "MongoDB", "React", "Tailwind CSS"],
     challenges:
       "Building customer trust online, managing real-time service updates, and handling a wide variety of electronics models from different brands were major challenges.",
