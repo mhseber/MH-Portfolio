@@ -46,7 +46,7 @@ const projects = [
       "Building customer trust online, managing real-time service updates, and handling a wide variety of electronics models from different brands were major challenges.",
     improvements:
       "In the future, we plan to add instant booking systems, real-time tracking of repair status, customer feedback integration, and a mobile app to make service requests even easier.",
-    liveLink: "https://prohand-f1b91.web.app/",
+    liveLink: "https://prohand-f1b91.web.app",
     githubLink: "https://github.com/mhseber/ProHand-client",
   },
   {
