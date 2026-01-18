@@ -88,7 +88,7 @@ const tools = [
 
 const Skills = () => {
   return (
-    <div id="skills" className="min-h-screen px-4 py-20 bg-gray-50">
+    <div id="skills" className="min-h-screen px-4 py-20 ">
       <h1 className="flex gap-2 mb-12 text-4xl font-semibold underline">
         <SlFire className="text-red-500" />
         Skills & Tools

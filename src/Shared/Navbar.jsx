@@ -108,12 +108,14 @@ const Navbar = () => {
               {navOptions}
             </ul>
           </div>
-          <h1 className="pl-4 text-2xl font-extrabold">
+          <h1 className="pl-4 text-4xl font-extrabold text-gray-400">
             <i>MH.SEBER</i>
           </h1>
         </div>
         <div className="hidden pr-32 font-medium navbar-center lg:flex">
-          <ul className="gap-6 px-1 text-2xl menu-horizontal ">{navOptions}</ul>
+          <ul className="gap-6 px-1 text-2xl text-gray-300 menu-horizontal ">
+            {navOptions}
+          </ul>
         </div>
       </div>
     </div>
