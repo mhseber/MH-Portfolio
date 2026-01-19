@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence, useScroll } from "framer-motion";
+import { motion as Motion, AnimatePresence, useScroll } from "framer-motion";
 import { GoProjectSymlink } from "react-icons/go";
 import { X, ExternalLink, Github } from "lucide-react";
 import project1 from "../assets/projects 1.PNG";
@@ -122,7 +122,7 @@ const Projects = () => {
     >
       <div ref={container} className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -134,12 +134,12 @@ const Projects = () => {
             Projects
           </h2>
           <div className="w-48 h-1 mt-2 bg-black rounded-full" />
-        </motion.div>
+        </Motion.div>
 
         {/* Project Cards */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
           {projects.map((project, index) => (
-            <motion.div
+            <Motion.div
               key={project.id}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -171,21 +171,21 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </Motion.div>
           ))}
         </div>
 
         {/* Modal */}
         <AnimatePresence>
           {selectedProject && (
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="fixed inset-0 z-50 flex items-center justify-center p-5 bg-black bg-opacity-60"
               onClick={() => setSelectedProject(null)}
             >
-              <motion.div
+              <Motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
@@ -267,8 +267,8 @@ const Projects = () => {
                     <Github size={18} /> View Code
                   </a>
                 </div>
-              </motion.div>
-            </motion.div>
+              </Motion.div>
+            </Motion.div>
           )}
         </AnimatePresence>
       </div>

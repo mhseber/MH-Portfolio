@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import { SlFire } from "react-icons/sl";
 import {
@@ -25,45 +25,44 @@ const skills = [
   {
     category: "Frontend",
     items: [
-      { name: "HTML", level: 95 },
-      { name: "React", level: 90 },
-      { name: "JavaScript", level: 70 },
+      { name: "HTML5 & CSS3", level: 99 },
+      { name: "React.js", level: 90 },
+      { name: "JavaScript (ES6+)", level: 85 },
       { name: "Tailwind CSS", level: 95 },
-      { name: "Next.js", level: 50 },
-      { name: "Firebase", level: 80 },
-      { name: "React Router", level: 80 },
-      { name: "React Hook Form", level: 75 },
+      { name: "Next.js", level: 75 },
+      { name: "TypeScript", level: 10 },
+      { name: "Axios & Fetch API", level: 85 },
     ],
   },
   {
-    category: "Backend",
+    category: "Backend & Auth",
     items: [
-      { name: "Node.js", level: 70 },
-      { name: "Express", level: 60 },
-      { name: "MongoDB", level: 75 },
-      { name: "Firebase Auth", level: 70 },
+      { name: "Node.js", level: 75 },
+      { name: "Express.js", level: 70 },
+      { name: "MongoDB", level: 80 },
+      { name: "Firebase (Auth & FireStore)", level: 85 },
+      { name: "RESTful APIs", level: 90 },
+      { name: "JWT Authentication", level: 65 },
     ],
   },
   {
-    category: "Tools",
+    category: "Design & Animation",
     items: [
-      { name: "Git", level: 80 },
-      { name: "Axios", level: 50 },
-      { name: "VS Code", level: 90 },
-      { name: "Figma", level: 70 },
-      { name: "React Toastify", level: 90 },
-      { name: "Vite", level: 85 },
-      { name: "Sweetalert2", level: 75 },
+      { name: "Figma", level: 75 },
+      { name: "Framer Motion", level: 85 },
+      { name: "DaisyUI", level: 95 },
+      { name: "Responsive Design", level: 98 },
+      { name: "Canva", level: 88 },
     ],
   },
   {
-    category: "DevOps & Hosting",
+    category: "Tools & Deployment",
     items: [
-      { name: "Netlify", level: 70 },
-      { name: "Vercel", level: 85 },
-      { name: "Surge", level: 70 },
-      { name: "GitHub Actions", level: 80 },
-      { name: "Firebase", level: 90 },
+      { name: "Git & GitHub", level: 85 },
+      { name: "Vercel / Netlify", level: 90 },
+      { name: "Postman", level: 75 },
+      { name: "Vite", level: 90 },
+      { name: "NPM / PNPM", level: 95 },
     ],
   },
 ];
@@ -86,13 +85,134 @@ const tools = [
   { name: "Vercel", icon: <RiVercelFill size={32} /> },
 ];
 
+const imgTools = [
+  {
+    name: "HTML",
+    src: "https://thumbs.dreamstime.com/b/astana-kazakhstan-july-html-icon-logo-vector-symbol-198641993.jpg",
+  },
+  {
+    name: "CSS",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7UbgCQjb0mCUe8Sk7QAz2y4KxOXXe0D-Itg&s",
+  },
+  {
+    name: "VS CODE",
+    src: "https://cdn.dribbble.com/userupload/33362890/file/original-e58be49d21e5f722ac142b37172a5409.png",
+  },
+  {
+    name: "GIT",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLnP6OmqDVCPB5Res4-7xWJK6DjMwnHa-HpQ&s",
+  },
+  {
+    name: "GITHUB",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuANvhcmXlP_41PL4VxP38Vcsted42ZY5TBQ&s",
+  },
+  {
+    name: "React",
+    src: "https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png",
+  },
+  {
+    name: "Next.js",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj13DpXfc1_RayzN0ecY0-p_ws7TK3sxpO6w&s",
+  },
+  {
+    name: "JavaScript",
+    src: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+  },
+  {
+    name: "Tailwind",
+    src: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+  },
+  {
+    name: "NPM Package",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShkLKIXoV9cqkHD-60xblHWwHPtn3BDpWW4w&s",
+  },
+  {
+    name: "vite",
+    src: "https://logowik.com/content/uploads/images/vite-frontend-tool1721420731.logowik.com.webp",
+  },
+  {
+    name: "DaisyUI",
+    src: "https://img.daisyui.com/images/daisyui/wallpaper-black.png",
+  },
+  {
+    name: "Node.js",
+    src: "https://cdn.freebiesupply.com/logos/large/2x/nodejs-1-logo-png-transparent.png",
+  },
+  {
+    name: "MongoDB",
+    src: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
+  },
+  {
+    name: "Express.js",
+    src: "https://cdn.hashnode.com/res/hashnode/image/upload/v1675637255386/f3a9a38b-116d-4b35-8f46-8d8abb78166f.png",
+  },
+  {
+    name: "Firebase",
+    src: "https://firebase.google.com/static/images/brand-guidelines/logo-vertical.png",
+  },
+  {
+    name: "Postman",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoZAPhkIP75IVa4trptoEfFlzk-0KFEm0ibg&s",
+  },
+  {
+    name: "Vercel",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1BLa_d1SN9EELEOi0Zy_S6MZbmRtqZpknxA&s",
+  },
+  {
+    name: "Netlify",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSInFF3IRKM4H6Intitu6czlku7sokFHtN_MA&s",
+  },
+  {
+    name: "Figma",
+    src: "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+  },
+  {
+    name: "Pixso",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROq0YZZapbpmhdHQlAebJ_FGvNcpA1NLliAQ&s",
+  },
+  {
+    name: "Canva",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8Hd3tvF7UP4eIcio2C5T1S39R2awdVjNTJQ&s",
+  },
+  {
+    name: "Framer Motion",
+    src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPznwv7OeqDgGjrlZfT28XyX4J9oJyZ9TYwg&s",
+  },
+];
+
 const Skills = () => {
   return (
     <div id="skills" className="min-h-screen px-4 py-20 ">
       <h1 className="flex gap-2 mb-12 text-4xl font-semibold underline">
-        <SlFire className="text-red-500" />
+        <SlFire className="text-purple-900" />
         Skills & Tools
       </h1>
+
+      {/* --- Image Tools Row --- */}
+      <div className="flex flex-wrap justify-center gap-10 mb-16">
+        {imgTools.map((tool, index) => (
+          <Motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.15, rotate: 3 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            className="relative flex items-center justify-center p-5 transition-all duration-300 border shadow-lg group bg-gray-900/40 rounded-2xl border-purple-500/20 hover:border-purple-500/60"
+          >
+            {/* লোগো ইমেজ */}
+            <img
+              src={tool.src}
+              alt={tool.name}
+              className="object-contain w-12 h-12 transition-all duration-500 md:w-16 md:h-16 filter grayscale group-hover:grayscale-0"
+            />
+
+            {/* হোভার করলে টুল এর নাম দেখাবে */}
+            <span className="absolute text-xs font-bold tracking-widest text-purple-400 uppercase transition-all duration-300 opacity-0 -bottom-8 group-hover:opacity-100 group-hover:-bottom-6">
+              {tool.name}
+            </span>
+          </Motion.div>
+        ))}
+      </div>
 
       {/* Marquee Row 1 */}
       <Marquee speed={50} gradient={false} pauseOnHover={true}>
@@ -101,20 +221,19 @@ const Skills = () => {
             key={index}
             className="flex flex-col items-center justify-center pt-3 mr-6 space-y-2"
           >
-            <motion.div
+            <Motion.div
               whileHover={{ scale: 1.1 }}
               className="p-4 text-white rounded-full bg-gradient-to-r from-purple-600 via-black to-purple-950"
             >
               {tool.icon}
-            </motion.div>
-            <span className="text-sm font-medium text-gray-700">
-              {tool.name}
-            </span>
+            </Motion.div>
+            <span className="text-sm font-bold text-gray-300">{tool.name}</span>
           </div>
         ))}
       </Marquee>
 
       {/* Marquee Row 2 */}
+
       <Marquee
         direction="right"
         speed={50}
@@ -127,15 +246,13 @@ const Skills = () => {
             key={index}
             className="flex flex-col items-center justify-center pt-2 mr-6 space-y-2"
           >
-            <motion.div
+            <Motion.div
               whileHover={{ scale: 1.1 }}
               className="p-4 text-white rounded-full bg-gradient-to-l from-purple-600 via-black to-purple-950"
             >
               {tool.icon}
-            </motion.div>
-            <span className="text-sm font-medium text-gray-700">
-              {tool.name}
-            </span>
+            </Motion.div>
+            <span className="text-sm font-bold text-gray-300">{tool.name}</span>
           </div>
         ))}
       </Marquee>
@@ -143,7 +260,7 @@ const Skills = () => {
       {/* Skill Bars */}
       <div className="grid grid-cols-1 gap-8 mt-16 md:grid-cols-3">
         {skills.map((category, index) => (
-          <motion.div
+          <Motion.div
             key={category.category}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -164,7 +281,7 @@ const Skills = () => {
                     <span className="text-gray-600">{skill.level}%</span>
                   </div>
                   <div className="w-full h-2 bg-gray-200 rounded-full">
-                    <motion.div
+                    <Motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
                       viewport={{ once: true }}
@@ -175,7 +292,7 @@ const Skills = () => {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </Motion.div>
         ))}
       </div>
     </div>
