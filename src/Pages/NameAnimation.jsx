@@ -1,12 +1,12 @@
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 
 const name = "Mahamudul Hasan Seber";
 
 const NameAnimation = () => {
   return (
-    <div className="flex flex-wrap font-extrabold lg:text-5xl text-purple-950">
+    <div className="flex flex-wrap pt-4 font-extrabold text-purple-800 lg:text-5xl">
       {name.split("").map((char, index) => (
-        <motion.span
+        <Motion.span
           key={index}
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -17,7 +17,7 @@ const NameAnimation = () => {
           }}
         >
           {char === " " ? "\u00A0" : char}
-        </motion.span>
+        </Motion.span>
       ))}
     </div>
   );
