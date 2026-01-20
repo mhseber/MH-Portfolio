@@ -6,7 +6,6 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-// import { GoProjectSymlink } from "react-icons/go";
 import { X, ExternalLink, Github } from "lucide-react";
 import project1 from "../assets/projects 1.PNG";
 import project2 from "../assets/projects 2.PNG";
@@ -304,7 +303,7 @@ const Projects = () => {
                     <a
                       href={selectedProject.liveLink}
                       target="_blank"
-                      className="flex items-center justify-center flex-1 gap-2 px-6 py-3 font-bold transition-all bg-purple-600 rounded-xl hover:bg-purple-700"
+                      className="flex items-center justify-center flex-1 gap-2 px-6 py-3 font-bold transition-all bg-purple-600 rounded-xl hover:bg-purple-700 bg-gradient-to-r from-purple-700 to-black text-white  hover:shadow-[0_0_20px_rgba(128,0,128,0.6)]  duration-300 transform hover:-translate-y-1 group"
                     >
                       <ExternalLink size={18} /> Live Demo
                     </a>

@@ -21,7 +21,7 @@ const About = () => {
   ];
 
   const interests = [
-    { name: "Pro Footballer", icon: <FaFutbol /> }, // হবির শুরুতে ফুটবল
+    { name: "Pro Footballer", icon: <FaFutbol /> },
     { name: "Coding", icon: <FaCode /> },
     { name: "Traveling", icon: <FaPlane /> },
     { name: "Gaming", icon: <FaGamepad /> },
@@ -30,7 +30,7 @@ const About = () => {
   const stats = [
     { count: "2+", label: "Years Experience" },
     { count: "20+", label: "Projects Done" },
-    { count: "100%", label: "Dedication" }, // ক্লায়েন্ট এবং খেলা দুটোর জন্যই
+    { count: "100%", label: "Dedication" },
   ];
 
   return (
