@@ -183,9 +183,14 @@ const imgTools = [
 const Skills = () => {
   return (
     <div id="skills" className="min-h-screen px-4 py-20 ">
-      <h1 className="flex gap-2 mb-12 text-4xl font-semibold underline">
-        <SlFire className="text-purple-900" />
-        Skills & Tools
+      <h1 className="flex items-center gap-3 mb-12 text-4xl font-extrabold md:text-5xl">
+        <SlFire className="text-purple-500 animate-pulse" />{" "}
+        {/* আইকন পালস করবে */}
+        <span className="text-transparent bg-gradient-to-r from-white via-purple-400 to-purple-600 bg-clip-text">
+          Skills & Tools
+        </span>
+        <div className="h-1 w-20 bg-purple-600 rounded-full mt-2 shadow-[0_0_10px_#a855f7]"></div>{" "}
+        {/* নিচে ছোট আন্ডারলাইন */}
       </h1>
 
       {/* --- Image Tools Row --- */}
