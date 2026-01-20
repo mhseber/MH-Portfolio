@@ -171,7 +171,11 @@ const Projects = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-70%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-[#030014]">
+    <section
+      id="projects"
+      ref={targetRef}
+      className="relative h-[300vh] bg-[#030014]"
+    >
       {/* Sticky Container */}
       <div className="sticky top-0 flex flex-col justify-center h-screen overflow-hidden">
         {/* Section Header */}
