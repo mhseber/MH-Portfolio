@@ -258,36 +258,57 @@ const Skills = () => {
       </Marquee>
 
       {/* Skill Bars */}
-      <div className="grid grid-cols-1 gap-8 mt-16 md:grid-cols-3">
+      <div className="grid grid-cols-1 gap-8 mt-16 md:grid-cols-2 lg:grid-cols-3">
         {skills.map((category, index) => (
           <Motion.div
             key={category.category}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            whileHover={{ y: -10 }} // হোভার করলে সামান্য উপরে উঠবে
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="p-6 bg-white rounded-lg shadow-lg"
+            className="p-8 bg-black/40 backdrop-blur-md border border-purple-500/20 rounded-2xl shadow-[0_0_15px_rgba(0,0,0,0.2)] hover:border-purple-500/50 transition-colors"
           >
-            <h3 className="mb-6 text-2xl font-bold text-gray-500">
+            <h3 className="mb-8 text-2xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text">
               {category.category}
             </h3>
-            <div className="space-y-4">
-              {category.items.map((skill) => (
-                <div key={skill.name}>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-gray-950">
-                      <i>{skill.name}</i>
+
+            <div className="space-y-6">
+              {category.items.map((skill, skillIndex) => (
+                <div key={skill.name} className="group">
+                  <div className="flex justify-between mb-2">
+                    <span className="font-medium text-gray-300 transition-colors group-hover:text-purple-400">
+                      {skill.name}
                     </span>
-                    <span className="text-gray-600">{skill.level}%</span>
+                    <span className="font-bold text-purple-500">
+                      {skill.level}%
+                    </span>
                   </div>
-                  <div className="w-full h-2 bg-gray-200 rounded-full">
+
+                  {/* মেইন বার */}
+                  <div className="w-full h-3 bg-gray-800 rounded-full overflow-hidden p-[1px]">
                     <Motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
                       viewport={{ once: true }}
-                      transition={{ duration: 1, ease: "easeOut" }}
-                      className="h-2 bg-purple-800 rounded-full"
-                    />
+                      transition={{
+                        duration: 1.5,
+                        delay: 0.2 + skillIndex * 0.1, // একেকটি বার একেক সময়ে লোড হবে
+                        ease: "circOut",
+                      }}
+                      className="relative h-full rounded-full bg-gradient-to-r from-purple-600 via-purple-400 to-pink-500"
+                    >
+                      {/* বার এর ভেতর একটি শাইন ইফেক্ট */}
+                      <Motion.div
+                        animate={{ x: ["-100%", "200%"] }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          ease: "linear",
+                        }}
+                        className="absolute inset-0 w-20 skew-x-12 bg-white/20"
+                      />
+                    </Motion.div>
                   </div>
                 </div>
               ))}
