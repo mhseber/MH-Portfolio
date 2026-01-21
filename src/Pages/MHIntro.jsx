@@ -48,7 +48,7 @@ const MHIntro = () => {
           <button
             onClick={() => {
               const link = document.createElement("a");
-              link.href = "/mhseber-resume.pdf";
+              link.href = "/MH-Resume-Frontend.pdf";
               link.download = "MH_Seber_Resume.pdf";
               document.body.appendChild(link);
               link.click();

@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { LuContact, LuPhoneCall } from "react-icons/lu";
 import { Send } from "lucide-react";
-import { motion as Motion } from "framer-motion"; // motion ছোট হাতের ইমপোর্ট করা হয়েছে
-import emailjs from "emailjs-com";
+import { motion as Motion } from "framer-motion";
 import animation from "../assets/Animation.json";
 import Lottie from "lottie-react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [status, setStatus] = useState("idle");
@@ -17,22 +17,22 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_yykk84q", // আপনার সার্ভিস আইডি
-        "template_aj43s4u", // আপনার টেমপ্লেট আইডি
-        e.target,
-        "6YTaUaYdLqSAnNsFt", // আপনার ইউজার আইডি
+        "service_yykk84q",
+        "template_aj43s4u",
+        e.target, // অথবা e.currentTarget ব্যবহার করুন
+        "6YTaUaYdLqSAnNsFt",
       )
-      .then(
-        () => {
-          setStatus("success");
-          e.target.reset();
-        },
-        () => {
-          setStatus("error");
-        },
-      );
+      .then((result) => {
+        console.log("Success:", result.text);
+        setStatus("success");
+        e.target.reset();
+      })
+      .catch((error) => {
+        console.error("Error Detail:", error);
+        setStatus("error");
+      });
 
-    setTimeout(() => setStatus("idle"), 3000);
+    setTimeout(() => setStatus("idle"), 5000);
   };
 
   return (
