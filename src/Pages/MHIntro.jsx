@@ -5,7 +5,7 @@ import {
   FaLinkedinIn,
   FaPaperPlane,
 } from "react-icons/fa";
-import me from "../assets/p-mh2.png";
+import me from "../assets/p-mh3.png";
 import NameAnimation from "./NameAnimation";
 import { FiGithub } from "react-icons/fi";
 import bgImage from "../assets/intro-bg.jpg";
@@ -14,11 +14,11 @@ const MHIntro = () => {
   return (
     <div
       id="home"
-      className="relative justify-around w-full min-h-screen pt-32 pb-10 bg-center bg-no-repeat bg-cover lg:flex"
+      className="relative justify-around w-full min-h-screen pb-10 bg-center bg-no-repeat bg-cover pt-28 lg:flex"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      {/* text */}
-      <div className="pt-20 pb-4 pl-5 lg:pl-0 lg:pb-0">
+      {/* text container */}
+      <div className="pt-20 pb-4 ml-6 lg:pl-0 lg:pb-0">
         <h1 className="text-3xl font-extrabold lg:text-5xl">
           <span className="text-gray-400">Hi I'am</span> <br />
           <NameAnimation />
@@ -109,13 +109,18 @@ const MHIntro = () => {
         </div>
       </div>
 
-      {/* img */}
-      <div className="pl-20 lg:pl-0">
-        {/* <img
-          src={me}
-          className=" h-[500px]  animate-gradient-x    shadow-[0_0_25px_5px_rgba(128,0,128,0.5)] bg-gradient-to-br from-purple-800 via-black to-purple-500"
-        /> */}
-        <img src={me} className=" h-[500px] " />
+      {/* img - Updated Section */}
+      <div className="flex items-center justify-center pt-10 lg:pt-0 lg:w-1/2">
+        <div className="relative">
+          {/* Background Decorative Circle */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-purple-500/10 rounded-full blur-3xl"></div>
+
+          <img
+            src={me}
+            className="w-[500px] h-auto object-contain image-rendering-auto contrast-[1.05] brightness-[1.05] saturate-[1.1]"
+            alt="MH Seber"
+          />
+        </div>
       </div>
     </div>
   );
