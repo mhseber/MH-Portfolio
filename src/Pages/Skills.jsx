@@ -20,6 +20,8 @@ import {
 } from "react-icons/si";
 import { RiPixelfedFill, RiVercelFill } from "react-icons/ri";
 import { DiFirebase } from "react-icons/di";
+import { FaRobot, FaBrain } from "react-icons/fa";
+import { SiOpenai } from "react-icons/si";
 
 const skills = [
   {
@@ -65,6 +67,16 @@ const skills = [
       { name: "NPM / PNPM", level: 95 },
     ],
   },
+  {
+    category: "AI & Productivity",
+    items: [
+      { name: "Prompt Engineering", level: 40 },
+      { name: "ChatGPT & Gemini", level: 95 },
+      { name: "GitHub Copilot", level: 75 },
+      { name: "AI Integration", level: 80 },
+      { name: "Problem Solving with AI", level: 62 },
+    ],
+  },
 ];
 
 const tools = [
@@ -97,6 +109,14 @@ const imgTools = [
   {
     name: "VS CODE",
     src: "https://cdn.dribbble.com/userupload/33362890/file/original-e58be49d21e5f722ac142b37172a5409.png",
+  },
+  {
+    name: "ChatGPT",
+    src: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+  },
+  {
+    name: "Gemini",
+    src: "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg",
   },
   {
     name: "GIT",

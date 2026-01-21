@@ -7,6 +7,7 @@ import {
   FaFutbol,
   FaCode,
   FaPlane,
+  FaRobot,
   FaGamepad,
 } from "react-icons/fa";
 
@@ -17,10 +18,12 @@ const About = () => {
     { label: "Name", value: "Mahamudul Hasan Seber", icon: <FaUser /> },
     { label: "Email", value: "sebermh@gmail.com", icon: <FaEnvelope /> },
     { label: "Location", value: "Dhaka, Bangladesh", icon: <FaMapMarkerAlt /> },
-    { label: "Profession", value: "Dev & Athlete", icon: <FaFutbol /> }, // এখানে চেঞ্জ এনেছি
+    { label: "Profession", value: "AI-Augmented Dev", icon: <FaRobot /> },
+    { label: "Profession", value: "Dev & Athlete", icon: <FaFutbol /> },
   ];
 
   const interests = [
+    { name: "AI Exploring", icon: <FaRobot /> },
     { name: "Pro Footballer", icon: <FaFutbol /> },
     { name: "Coding", icon: <FaCode /> },
     { name: "Traveling", icon: <FaPlane /> },
@@ -31,6 +34,7 @@ const About = () => {
     { count: "2+", label: "Years Experience" },
     { count: "20+", label: "Projects Done" },
     { count: "100%", label: "Dedication" },
+    { count: "High", label: "AI Proficiency" },
   ];
 
   return (
@@ -72,13 +76,23 @@ const About = () => {
                 className="absolute inset-2 w-[calc(100%-16px)] h-[calc(100%-16px)] object-cover rounded-full border-4 border-gray-800 shadow-[0_0_30px_rgba(168,85,247,0.5)]"
               />
 
-              {/* Floating Badge 1: Developer */}
-              <div className="absolute top-0 left-0 px-3 py-1 text-xs font-bold text-purple-400 bg-gray-900 border rounded-full shadow-lg border-purple-500/30 animate-bounce">
+              {/* Floating Badge 1: AI Developer (Top Left) */}
+              <div className="absolute -top-4 -left-4 px-4 py-1.5 text-xs font-bold text-white bg-purple-600 border rounded-full shadow-[0_0_15px_rgba(168,85,247,0.5)] border-purple-400 animate-bounce">
+                ✨ AI Enthusiast
+              </div>
+
+              {/* Floating Badge 2: Coder (Top Right) */}
+              <div className="absolute -top-4 -right-4 px-4 py-1.5 text-xs font-bold text-white bg-blue-600 border rounded-full shadow-[0_0_15px_rgba(37,99,235,0.5)] border-blue-400 animate-[bounce_2s_infinite_1s]">
                 💻 Coder
               </div>
 
-              {/* Floating Badge 2: Footballer */}
-              <div className="absolute right-0 flex items-center gap-2 px-4 py-2 font-bold text-black transition-transform transform bg-white shadow-lg bottom-8 rounded-xl hover:scale-110">
+              {/* Floating Badge 3: Web Architect (Bottom Left) */}
+              <div className="absolute -bottom-2 -left-8 px-4 py-1.5 text-xs font-bold text-white bg-gradient-to-r from-gray-800 to-black border rounded-full shadow-lg border-gray-600 animate-[bounce_3s_infinite_0.5s]">
+                🚀 Web Architect
+              </div>
+
+              {/* Floating Badge 4: Pro Footballer (আগে যেটা ছিল, Bottom Right) */}
+              <div className="absolute flex items-center gap-2 px-4 py-2 font-bold text-black transition-transform transform bg-white shadow-xl -right-4 bottom-8 rounded-xl hover:scale-110">
                 ⚽ Pro Footballer
               </div>
             </div>
@@ -93,29 +107,43 @@ const About = () => {
             className="w-full text-white lg:w-1/2"
           >
             <h3 className="mb-4 text-2xl font-semibold text-purple-200">
-              The balance of Logic & Agility
+              The Fusion of Logic, Agility & Intelligence
             </h3>
 
             <p className="mb-6 text-lg leading-relaxed text-gray-400">
               Hi! I’m <span className="font-bold text-white">MH Seber</span>. I
-              live a dual life driven by passion—I am a creative{" "}
+              live a dynamic life driven by three passions—I am a creative{" "}
               <span className="font-bold text-purple-400">
+                AI-Augmented Developer
+              </span>
+              , a dedicated{" "}
+              <span className="font-bold text-blue-300">
                 Frontend Developer
-              </span>{" "}
-              and a{" "}
+              </span>
+              , and a{" "}
               <span className="font-bold text-green-400">
                 Professional Footballer
               </span>
               .
             </p>
 
-            <p className="mb-8 leading-relaxed text-gray-400">
-              On the field, I learned the value of{" "}
-              <b>discipline, teamwork, and quick decision-making</b>—skills that
-              I directly apply to my coding. Whether I'm debugging a complex
-              React component or making a crucial pass in a match, my focus
-              remains sharp. I build seamless, high-performance web applications
-              with the same energy I bring to the game.
+            <p className="mb-4 leading-relaxed text-gray-400">
+              On the field, I mastered{" "}
+              <b>discipline and quick decision-making</b>. In the world of code,
+              I take it a step further by integrating
+              <span className="italic text-purple-400">
+                {" "}
+                Artificial Intelligence
+              </span>
+              . I don't just build websites; I craft smart, high-performance web
+              applications leveraging AI tools to optimize every pixel and line
+              of code.
+            </p>
+
+            <p className="py-2 pl-4 mb-8 italic leading-relaxed text-gray-400 border-l-2 border-purple-500 bg-purple-500/5">
+              "My goal is to bridge the gap between human creativity and AI
+              efficiency, bringing the same competitive energy from the football
+              pitch to the digital world."
             </p>
 
             {/* Stats Row */}

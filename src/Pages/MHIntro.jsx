@@ -27,6 +27,7 @@ const MHIntro = () => {
           <span className="text-purple-400">Frontend Developer</span> || Web
           Enthusiast
         </h1>
+
         <p className="max-w-xl pt-6 font-light leading-relaxed text-gray-400 lg:text-lg md:text-xl">
           Specializing in crafting{" "}
           <span className="italic font-semibold text-purple-500">
@@ -42,6 +43,20 @@ const MHIntro = () => {
           </span>{" "}
           and elegant design with clean, scalable code.
         </p>
+        {/* Ai */}
+        {/* 👇👇 আপডেট ১: আগের প্যারাগ্রাফের ঠিক নিচে এই নতুন প্যারাগ্রাফটি দিন 👇👇 */}
+
+        {/* ✨ এই অংশটুকু নতুন যোগ করুন (AI Description) ✨ */}
+        <p className="max-w-xl pt-4 font-light leading-relaxed text-gray-400 lg:text-lg md:text-xl">
+          As an{" "}
+          <span className="font-bold text-purple-400">
+            AI-Augmented Developer
+          </span>
+          , I leverage tools like{" "}
+          <span className="font-medium text-white">ChatGPT & Gemini</span> to
+          enhance productivity and solve complex problems efficiently.
+        </p>
+        {/* 👆👆 নতুন অংশ শেষ 👆👆 */}
         {/* btn Container */}
         <div className="flex flex-wrap items-center gap-4 pt-6 pl-2">
           {/* resume btn */}
