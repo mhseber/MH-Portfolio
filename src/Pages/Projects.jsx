@@ -159,84 +159,37 @@ const projects = [
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
-  const targetRef = useRef(null);
-
-  // Horizontal Scroll Setup
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
-
-  // এই ভ্যালুটি প্রজেক্টের সংখ্যার ওপর নির্ভর করে।
-  // -75% মানে কার্ডগুলো বাম দিকে সরে যাবে।
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-70%"]);
 
   return (
-    <section
-      id="projects"
-      ref={targetRef}
-      className="relative h-[300vh] bg-[#030014]"
-    >
-      {/* Sticky Container */}
-      <div className="sticky top-0 flex flex-col justify-center h-screen overflow-hidden">
-        {/* Section Header */}
-        <div className="px-10 mb-10">
-          <Motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="flex flex-col"
-          >
-            <h2 className="flex items-center gap-3 text-5xl font-black text-white md:text-6xl">
-              <GoProjectSymlink className="text-purple-500" />
-              My <span className="text-purple-500">Works</span>
-            </h2>
-            <div className="w-32 h-1.5 mt-4 bg-gradient-to-r from-purple-600 to-transparent rounded-full" />
-          </Motion.div>
-        </div>
-
-        {/* Horizontal Moving Track */}
-        <div className="flex items-center">
-          <Motion.div style={{ x }} className="flex gap-8 px-10">
-            {projects.map((project) => (
-              <Motion.div
-                key={project.id}
-                whileHover={{ y: -10 }}
-                onClick={() => setSelectedProject(project)}
-                className="group relative h-[450px] w-[350px] md:w-[450px] overflow-hidden bg-white/5 border border-white/10 rounded-3xl backdrop-blur-sm cursor-pointer shrink-0"
-              >
-                <div className="relative overflow-hidden h-2/3">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#030014] to-transparent opacity-80" />
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-white transition-colors group-hover:text-purple-400">
-                    {project.title}
-                  </h3>
-                  <p className="mt-2 text-sm italic text-gray-400 line-clamp-2">
-                    {project.brief}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {project.technologies.slice(0, 3).map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 text-[10px] font-bold text-purple-300 bg-purple-500/10 border border-purple-500/20 rounded-lg"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </Motion.div>
-            ))}
-          </Motion.div>
-        </div>
+    <section id="projects" className="bg-[#030014] py-20 px-6 md:px-10">
+      {/* Section Header */}
+      <div className="mx-auto mb-16 max-w-7xl">
+        <Motion.div
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col"
+        >
+          <h2 className="flex items-center gap-3 text-5xl font-black text-white md:text-6xl">
+            <GoProjectSymlink className="text-purple-500" />
+            My <span className="text-purple-500">Works</span>
+          </h2>
+          <div className="w-32 h-1.5 mt-4 bg-gradient-to-r from-purple-600 to-transparent rounded-full" />
+        </Motion.div>
       </div>
 
-      {/* --- Modal Window (Updated Dark UI) --- */}
+      {/* Projects Grid with Scroll Zoom Effect */}
+      <div className="grid grid-cols-1 gap-10 mx-auto max-w-7xl md:grid-cols-2 ">
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.id}
+            project={project}
+            setSelectedProject={setSelectedProject}
+          />
+        ))}
+      </div>
+
+      {/* --- Modal Window (আগের মতোই থাকবে) --- */}
       <AnimatePresence>
         {selectedProject && (
           <Motion.div
@@ -253,6 +206,7 @@ const Projects = () => {
               className="max-w-4xl w-full max-h-[90vh] overflow-y-auto rounded-[2rem] p-8 bg-[#0b031a] border border-purple-500/30 text-white shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
+              {/* Modal Content (আগের কোডটাই এখানে থাকবে) */}
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-3xl font-black">{selectedProject.title}</h3>
                 <button
@@ -262,12 +216,10 @@ const Projects = () => {
                   <X size={24} />
                 </button>
               </div>
-
               <img
                 src={selectedProject.image}
                 className="w-full h-auto mb-8 border rounded-2xl border-white/10"
               />
-
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                 <div className="space-y-6">
                   <div>
@@ -307,7 +259,7 @@ const Projects = () => {
                     <a
                       href={selectedProject.liveLink}
                       target="_blank"
-                      className="flex items-center justify-center flex-1 gap-2 px-6 py-3 font-bold transition-all bg-purple-600 rounded-xl hover:bg-purple-700 bg-gradient-to-r from-purple-700 to-black text-white  hover:shadow-[0_0_20px_rgba(128,0,128,0.6)]  duration-300 transform hover:-translate-y-1 group"
+                      className="flex items-center justify-center flex-1 gap-2 px-6 py-3 font-bold transition-all bg-purple-600 rounded-xl hover:bg-purple-700 bg-gradient-to-r from-purple-700 to-black text-white hover:shadow-[0_0_20px_rgba(128,0,128,0.6)] duration-300 transform hover:-translate-y-1 group"
                     >
                       <ExternalLink size={18} /> Live Demo
                     </a>
@@ -326,6 +278,56 @@ const Projects = () => {
         )}
       </AnimatePresence>
     </section>
+  );
+};
+
+/* --- আলাদা কার্ড কম্পোনেন্ট (Scroll Zoom Effect এর জন্য) --- */
+const ProjectCard = ({ project, setSelectedProject }) => {
+  const cardRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["0 1", "1.2 1"], // কার্ডটি যখন স্ক্রিনে আসবে তখন শুরু হবে
+  });
+
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
+  return (
+    <Motion.div
+      ref={cardRef}
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
+      onClick={() => setSelectedProject(project)}
+      className="group relative h-[500px] w-full overflow-hidden bg-white/5 border border-white/10 rounded-3xl backdrop-blur-sm cursor-pointer shadow-2xl"
+    >
+      <div className="relative overflow-hidden h-2/3">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent opacity-90" />
+      </div>
+
+      <div className="p-4">
+        <h3 className="text-3xl font-bold text-white transition-colors group-hover:text-purple-400">
+          {project.title}
+        </h3>
+        <p className="mt-2 text-gray-400 line-clamp-2">{project.brief}</p>
+        <div className="flex flex-wrap gap-2 mt-4">
+          {project.technologies.slice(0, 4).map((tech) => (
+            <span
+              key={tech}
+              className="px-3 py-1 text-xs font-bold text-purple-300 border rounded-lg bg-purple-500/10 border-purple-500/20"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </Motion.div>
   );
 };
 
